@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: beige;
+  background-repeat: no-repeat;
+}
+
+label {
+  color: white;
+}
+
+.signupSection {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.signupForm {
+  width: 100%;
+  padding: 30px;
+  background: rgba(20, 40, 40, .8);
+  transition: .2s;
+}
+
+.signupForm h2 {
+  font-weight: 300;
+  color: white;
+}
+
+input {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid rgba(10, 180, 180, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, .2);
+  color: white;
+  outline: none;
+}
+
+.noBullet {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* set up hidden tooltip */
+[role="tooltip"] {
+  display: none;
+  padding: 0 2px 2px 2px;
+  margin: 0 0 10px 0;
+  color: darkgrey;
+  width: 100%;
+  z-index: 2;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* reveal associated tooltip on focus of preceeding input */
+input:focus + [role="tooltip"] {
+  display: block;
+}
+
+#join-btn {
+  border: 1px solid rgba(10, 180, 180, 1);
+  background: rgba(20, 20, 20, .6);
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#join-btn:hover {
+  background: rgba(20, 20, 20, .8);
+  padding: 10px 80px;
+}

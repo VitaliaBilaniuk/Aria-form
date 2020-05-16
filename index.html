@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Accessible Form Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- include css and javascript -->
+            <link rel="stylesheet" href="style.css" />
+            <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- <div id="content-wrapper">
+            <h2>Sample Form</h2>
+            <form action="#" autocomplete="on" name="myForm" onsubmit="return validateForm()" method="get">
+                <p>Required fields are indicated with a "<span class="reqField">*</span>".</p>
+
+                <div>
+                    <label for="fName">First Name:<span class="reqField">*</span></label><br />
+                    <input id="fName" type="text" name="firstName" aria-required="" required="" aria-describedby="fName-tip"/>
+                    <div role="tooltip" id="fName-tip">Hint: Type your first name here.</div>
+                </div>
+
+                <div>
+                    <label for="lName">Last Name:<span class="reqField">*</span></label><br />
+                    <input id="lName" type="text" name="lastName" aria-required="" required="" aria-describedby="lName-tip"/>
+                    <div role="tooltip" id="lName-tip">Hint: Type your last name here.</div>
+                </div>
+
+                <div>
+                    <label for="address1">Address line 1:<span class="reqField">*</span></label><br />
+                    <input id="address1" type="text" name="address" aria-required="" required="" aria-describedby="address1-tip"/>
+                    <div role="tooltip" id="address1-tip">Hint: Type your address here.</div>
+                </div>
+
+                <div>
+                    <label for="address2">Address line 2:</label><br />
+                    <input id="address2" type="text" name="address2" aria-describedby="address2-tip"/>
+                    <div role="tooltip" id="address2-tip">Hint: Type your additional address here.</div>
+                </div>
+
+                <div>
+                    <label for="city">City:<span class="reqField">*</span></label><br />
+                    <input id="city" type="text" name="city" aria-required="" required="" aria-describedby="city-tip"/>
+                    <div role="tooltip" id="city-tip">Hint: Type your city here.</div>
+                </div>
+
+                <div>
+                    <label for="state">State/Province/Region:<span class="reqField">*</span></label><br />
+                    <input id="state" type="text" name="state" aria-required="" required="" aria-describedby="state-tip"/>
+                    <div role="tooltip" id="state-tip">Hint: Type your state/province or region here.</div>
+                </div>
+
+                <div>
+                    <label for="zip">ZIP/Postal code:<span class="reqField">*</span></label><br />
+                    <input id="zip" type="text" name="zip" aria-required="" required="" aria-describedby="zip-tip"/>
+                    <div role="tooltip" id="zip-tip">Hint: Type your ZIP/postal code here.</div>
+                </div>
+
+                <div>
+                    <label for="country">Country<span class="reqField">*</span></label><br />
+                    <select id="country" name="country" aria-required="" required="">
+                        <option>Canada</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                        <option>Italy</option>
+                        <option>Japan</option>
+                        <option>Russia</option>
+                        <option>United Kingdom</option>
+                        <option>United States</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="bday">Birthday(day,month, year):<span class="reqField">*</span></label><br />
+                    <input id="bday" type="date" name="bday" aria-required="" required="" aria-describedby="bday-tip">
+                    <div role="tooltip" id="bday-tip">Hint: Type your birthday date here.</div>
+                </div>
+                
+                <div>
+                    <label for="cardNumber">Card number:<span class="reqField">*</span></label><br />
+                    <input id="cardNumber" type="text" name="cardNumber" aria-required="" required="" aria-describedby="cardNumber-tip"/>
+                    <div role="tooltip" id="cardNumber-tip">Hint: Type your card number here.</div>
+                </div>
+                
+                <div>
+                    <label for="phoneNumber">Phone Number:</label><br />
+                    <input id="phoneNumber" type="text" name="phoneNumber" aria-describedby="phoneNumber-tip"/>
+                    <div role="tooltip" id="phoneNumber-tip">Hint: Type your phone number here.</div>
+                </div>
+
+                <div>
+                    <label for="email">Email:<span class="reqField">*</span></label><br />
+                    <input id="email" type="email" name="email" value="" aria-required="" required="" aria-describedby="email-tip"/>
+                    <div role="tooltip" id="email-tip">Hint: Type your email address here.</div>
+                </div>
+
+                <div>
+                    <label for="company">Company:</label><br />
+                    <input id="company" type="text" name="company" aria-describedby="company-tip"/>
+                    <div role="tooltip" id="company-tip">Hint: Type your company here.</div>
+                </div>
+
+                <div>
+                    <label for="position">Position:</label><br />
+                    <input id="position" type="text" name="position" aria-describedby="position-tip"/>
+                    <div role="tooltip" id="position-tip">Hint: Type your position here.</div>
+                </div>
+
+                <div><input type="submit" name="submit" value="Submit"/>
+                    <input type="reset" name="reset" value="Reset"/>
+                </div>
+            </form>
+        </div> -->
+    
+        <div class="signupSection">
+            <form action="#" autocomplete="on" name="myForm" onsubmit="return validateForm()" method="POST" class="signupForm">
+                <h2>Sign Up</h2>
+                <ul class="noBullet">
+                <li>
+                    <label for="fName">First Name:<span class="reqField">*</span></label><br />
+                    <input id="fName" type="text" name="firstName" aria-required="" required="" aria-describedby="fName-tip"/>
+                    <div role="tooltip" id="fName-tip">Hint: Type your first name here.</div>
+                </li>
+                <li>
+                    <label for="lName">Last Name:<span class="reqField">*</span></label><br />
+                    <input id="lName" type="text" name="lastName" aria-required="" required="" aria-describedby="lName-tip"/>
+                    <div role="tooltip" id="lName-tip">Hint: Type your last name here.</div>
+                </li>
+                <li>
+                    <label for="address1">Address line 1:<span class="reqField">*</span></label><br />
+                    <input id="address1" type="text" name="address" aria-required="" required="" aria-describedby="address1-tip"/>
+                    <div role="tooltip" id="address1-tip">Hint: Type your address here.</div>
+                </li>
+                <li>
+                    <label for="address2">Address line 2:</label><br />
+                    <input id="address2" type="text" name="address2" aria-describedby="address2-tip"/>
+                    <div role="tooltip" id="address2-tip">Hint: Type your additional address here.</div>
+                </li>
+                <li>
+                    <label for="city">City:<span class="reqField">*</span></label><br />
+                    <input id="city" type="text" name="city" aria-required="" required="" aria-describedby="city-tip"/>
+                    <div role="tooltip" id="city-tip">Hint: Type your city here.</div>
+                </li>
+                <li>
+                    <label for="state">State/Province/Region:<span class="reqField">*</span></label><br />
+                    <input id="state" type="text" name="state" aria-required="" required="" aria-describedby="state-tip"/>
+                    <div role="tooltip" id="state-tip">Hint: Type your state/province or region here.</div>
+                </li>
+                <li>
+                    <label for="zip">ZIP/Postal code:<span class="reqField">*</span></label><br />
+                    <input id="zip" type="text" name="zip" aria-required="" required="" aria-describedby="zip-tip"/>
+                    <div role="tooltip" id="zip-tip">Hint: Type your ZIP/postal code here.</div>
+                </li>
+                <li>
+                    <label for="country">Country<span class="reqField">*</span></label><br />
+                    <select id="country" name="country" aria-required="" required="">
+                        <option>Canada</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                        <option>Italy</option>
+                        <option>Japan</option>
+                        <option>Russia</option>
+                        <option>United Kingdom</option>
+                        <option>United States</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="bday">Birthday(day,month, year):<span class="reqField">*</span></label><br />
+                    <input id="bday" type="date" name="bday" aria-required="" required="" aria-describedby="bday-tip">
+                    <div role="tooltip" id="bday-tip">Hint: Type your birthday date here.</div>
+                </li>
+                <li>
+                    <label for="cardNumber">Card number:<span class="reqField">*</span></label><br />
+                    <input id="cardNumber" type="text" name="cardNumber" aria-required="" required="" aria-describedby="cardNumber-tip"/>
+                    <div role="tooltip" id="cardNumber-tip">Hint: Type your card number here.</div>
+                </li>
+                <li>
+                    <label for="phoneNumber">Phone Number:</label><br />
+                    <input id="phoneNumber" type="text" name="phoneNumber" aria-describedby="phoneNumber-tip"/>
+                    <div role="tooltip" id="phoneNumber-tip">Hint: Type your phone number here.</div>
+                </li>
+                <li>
+                    <label for="email">Email:<span class="reqField">*</span></label><br />
+                    <input id="email" type="email" name="email" value="" aria-required="" required="" aria-describedby="email-tip"/>
+                    <div role="tooltip" id="email-tip">Hint: Type your email address here.</div>
+                </li>
+                <li>
+                    <label for="company">Company:</label><br />
+                    <input id="company" type="text" name="company" aria-describedby="company-tip"/>
+                    <div role="tooltip" id="company-tip">Hint: Type your company here.</div>
+                </li>
+                <li>
+                    <label for="position">Position:</label><br />
+                    <input id="position" type="text" name="position" aria-describedby="position-tip"/>
+                    <div role="tooltip" id="position-tip">Hint: Type your position here.</div>
+                </li>
+                <li id="center-btn">
+                    <input type="submit" id="join-btn" name="join" alt="Join" value="Join">
+                </li>
+                </ul>
+            </form>
+        </div>
+    </body>
+</html>
+
