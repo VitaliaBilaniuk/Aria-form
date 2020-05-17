@@ -1,50 +1,46 @@
-//Form validation
-var formValid;
-
-function validateForm() {
-	console.log('ddd');
+function changeFontSize(el, sizeFormat) {
+    document.getElementById(el).className = sizeFormat;
+    document.getElementById("fontSize").value = sizeFormat;
 }
 
+function stopLoader() {
+    const content = document.querySelector('.js-content');
+    const spinner = content.querySelector('.js-loading-spinner');
+    const button = content.querySelector('.js-spinner-button');
+    const pauseClass  = 'paused';
 
-
-var alertRedInput = "#8C1010";
-var defaultInput = "rgba(10, 180, 180, 1)";
-
-function userNameValidation(usernameInput) {
-    var username = document.getElementById("username");
-    var issueArr = [];
-    if (/[-!@#$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/.test(usernameInput)) {
-        issueArr.push("No special characters!");
-    }
-    if (issueArr.length > 0) {
-        username.setCustomValidity(issueArr);
-        username.style.borderColor = alertRedInput;
+    if(spinner.classList.contains(pauseClass)) {
+        spinner.classList.remove(pauseClass); 
+        button.innerHTML = 'Pause spinner';
     } else {
-        username.setCustomValidity("");
-        username.style.borderColor = defaultInput;
+        spinner.classList.add(pauseClass);    
+        button.innerHTML = 'Play spinner';
     }
 }
 
-function passwordValidation(passwordInput) {
-    var password = document.getElementById("password");
-    var issueArr = [];
-    if (!/^.{7,15}$/.test(passwordInput)) {
-        issueArr.push("Password must be between 7-15 characters.");
-    }
-    if (!/\d/.test(passwordInput)) {
-        issueArr.push("Must contain at least one number.");
-    }
-    if (!/[a-z]/.test(passwordInput)) {
-        issueArr.push("Must contain a lowercase letter.");
-    }
-    if (!/[A-Z]/.test(passwordInput)) {
-        issueArr.push("Must contain an uppercase letter.");
-    }
-    if (issueArr.length > 0) {
-        password.setCustomValidity(issueArr.join("\n"));
-        password.style.borderColor = alertRedInput;
-    } else {
-        password.setCustomValidity("");
-        password.style.borderColor = defaultInput;
-    }
-}
+(function() {
+	function toJSONString( form ) {
+		var obj = {};
+		var elements = form.querySelectorAll( "input, select" );
+		for( var i = 0; i < elements.length; ++i ) {
+			var element = elements[i];
+			var name = element.name;
+			var value = element.value;
+			if( name ) {
+				obj[ name ] = value;
+			}
+		}
+		return JSON.stringify( obj );
+	}
+
+	document.addEventListener( "DOMContentLoaded", function() {
+		var form = document.getElementById( "signupForm" );
+		form.addEventListener( "submit", function( e ) {
+			e.preventDefault();
+			var json = toJSONString( this );
+            console.log(json, 'form fields values');
+		}, false);
+
+    });
+
+})();

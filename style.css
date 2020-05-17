@@ -14,6 +14,24 @@ label {
   color: white;
 }
 
+[hidden] { display: none !important; }
+
+.buttons-group {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-group button{
+  font-size: 1em;
+  margin: 20px;
+  padding: 10px 20px;
+}
+
+.buttons-group button:hover {
+  background: rgba(20, 20, 20, .8);
+  padding: 10px 30px;
+}
+
 .signupSection {
   max-width: 300px;
   margin: 0 auto;
@@ -31,9 +49,9 @@ label {
   color: white;
 }
 
-input {
+input, select {
   margin: 15px 0;
-  font-size: 16px;
+  font-size: 0.7em;
   padding: 10px;
   width: 250px;
   border: 1px solid rgba(10, 180, 180, 1);
@@ -43,6 +61,12 @@ input {
   background: rgba(20, 20, 20, .2);
   color: white;
   outline: none;
+  border-radius: 5px;
+}
+
+select {
+  width: 270px;
+  height: 43px;
 }
 
 .noBullet {
@@ -50,27 +74,25 @@ input {
   padding: 0;
 }
 
-/* set up hidden tooltip */
 [role="tooltip"] {
   display: none;
   padding: 0 2px 2px 2px;
   margin: 0 0 10px 0;
-  color: darkgrey;
+  color: #FDF5E6;
   width: 100%;
   z-index: 2;
   font-weight: normal;
   font-style: italic;
 }
 
-/* reveal associated tooltip on focus of preceeding input */
 input:focus + [role="tooltip"] {
   display: block;
 }
 
-#join-btn {
+button {
   border: 1px solid rgba(10, 180, 180, 1);
   background: rgba(20, 20, 20, .6);
-  font-size: 18px;
+  font-size: 1.5em;
   color: white;
   margin-top: 20px;
   padding: 10px 50px;
@@ -78,7 +100,89 @@ input:focus + [role="tooltip"] {
   transition: .4s;
 }
 
-#join-btn:hover {
+button:hover {
   background: rgba(20, 20, 20, .8);
   padding: 10px 80px;
+}
+
+#myContainer.size-normal { font-size: 16px; }
+#myContainer.size-large { font-size: 18px; }
+#myContainer.size-small { font-size: 14px; }
+
+.loading-spinner {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  height: 80px;
+  padding: 40px 40px 0;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+.loading-spinner.paused {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  opacity: 0.2;
+  -webkit-transition: opacity linear 0.1s;
+  transition: opacity linear 0.1s;
+}
+
+.loading-spinner::before {
+  -webkit-animation: 1.5s linear infinite spinner;
+  animation: 1.5s linear infinite spinner;
+  -webkit-animation-play-state: inherit;
+  animation-play-state: inherit;
+  border: solid 3px #ffffff;
+  border-bottom-color: #0ab4b4;
+  border-radius: 50%;
+  content: "";
+  height: 40px;
+  left: 50%;
+  opacity: inherit;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  width: 40px;
+  will-change: transform;
+}
+
+.loading-spinner-btn {
+  display: inline-block;
+  margin: 0 auto 40px;
+  background: rgba(20, 20, 20, .8);
+}
+
+.loading-spinner-btn:hover {
+  padding: 10px 40px;
 }
