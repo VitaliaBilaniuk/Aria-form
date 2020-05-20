@@ -7,16 +7,18 @@
         <!-- include css and javascript -->
             <link rel="stylesheet" href="style.css" />
             <script src="script.js"></script>
+            <script src="utils.js"></script>
+            <script src="modal-window.js"></script>
     </head>
     <body>
         <div id="myContainer">
             <div class="signupSection">
+                <div class="buttons-group">
+                    <button onclick="changeFontSize('myContainer', 'size-small')">Small Font</button>
+                    <button onclick="changeFontSize('myContainer', 'size-normal')">Normal Font</button>
+                    <button onclick="changeFontSize('myContainer', 'size-large')">Large Font</button>
+                </div>
                 <form action="#" autocomplete="on" id="signupForm" name="myForm" method="POST" class="signupForm">
-                    <div class="buttons-group">
-                        <button onclick="changeFontSize('myContainer', 'size-small')">Small Font</button>
-                        <button onclick="changeFontSize('myContainer', 'size-normal')">Normal Font</button>
-                        <button onclick="changeFontSize('myContainer', 'size-large')">Large Font</button>
-                    </div>
                     <h2>Sign Up</h2>
                     <ul class="noBullet">
                     <li>
@@ -101,13 +103,29 @@
                         <div role="tooltip" id="position-tip">Hint: Type your position here.</div>
                     </li>
                     <li>
-                        <button type="submit" id="join-btn" name="join">Join</button>
+                        <button type="submit" id="join-btn" name="join" >Join</button>
                     </li>
                     </ul>
                 </form>
-                <div class="content js-content"> 
-                    <div id="loading-spinner" class="loading-spinner js-loading-spinner" role="alert" aria-live="assertive"></div>
-                    <button class="btn loading-spinner-btn js-spinner-button" onclick="stopLoader()" aria-controls="loading-spinner">Pause spinner</button>
+
+                <div role="dialog"
+                    id="dialog"
+                    aria-labelledby="dialog1_label"
+                    aria-modal="true"
+                    class="hidden">
+                    <div id="spinnerSection" class="content js-content"> 
+                        <div id="loading-spinner" class="loading-spinner js-loading-spinner" role="alert" aria-live="assertive">
+                            <p class="vh js-loading-spinner-copy">Content is loading...</p>
+                        </div>
+                        <button class="btn loading-spinner-btn js-spinner-button" onclick="stopLoader()" aria-controls="loading-spinner">Pause spinner</button>
+                    </div>
+                    <div id="codeWrapper">
+                    </div>
+                    <div class="dialog_form_actions">
+                        <button onclick="closeDialog(this)">
+                            Cancel
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

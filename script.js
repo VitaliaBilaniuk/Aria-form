@@ -18,14 +18,20 @@ function stopLoader() {
     }
 }
 
+String.prototype.replaceAll = function(search, replacement) {
+    let target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+};
+
 (function() {
+	
 	function toJSONString( form ) {
-		var obj = {};
-		var elements = form.querySelectorAll( "input, select" );
-		for( var i = 0; i < elements.length; ++i ) {
-			var element = elements[i];
-			var name = element.name;
-			var value = element.value;
+		const obj = {};
+		const elements = form.querySelectorAll( "input, select" );
+		for( let i = 0; i < elements.length; ++i ) {
+			const element = elements[i];
+			const name = element.name;
+			const value = element.value;
 			if( name ) {
 				obj[ name ] = value;
 			}
@@ -34,13 +40,18 @@ function stopLoader() {
 	}
 
 	document.addEventListener( "DOMContentLoaded", function() {
-		var form = document.getElementById( "signupForm" );
+		const form = document.getElementById( "signupForm" );	
 		form.addEventListener( "submit", function( e ) {
 			e.preventDefault();
-			var json = toJSONString( this );
-            console.log(json, 'form fields values');
+			openDialog('dialog', this);
+			const json = toJSONString( this ).replaceAll(',', ',\n');
+			setTimeout(function showResultValues() {
+				document.getElementById('spinnerSection').setAttribute("hidden", "");
+				const codeSection = document.createElement('pre');
+				document.getElementById('codeWrapper').appendChild(codeSection);
+				codeSection.innerHTML = json;
+			}, 5000);
 		}, false);
-
     });
 
 })();

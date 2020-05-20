@@ -1,108 +1,108 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 * {
-  font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: beige;
-  background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background: beige;
+    background-repeat: no-repeat;
 }
 
 label {
-  color: white;
+    color: white;
 }
 
 [hidden] { display: none !important; }
 
 .buttons-group {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .buttons-group button{
-  font-size: 1em;
-  margin: 20px;
-  padding: 10px 20px;
+    font-size: 1em;
+    margin: 20px;
+    padding: 10px 20px;
 }
 
 .buttons-group button:hover {
-  background: rgba(20, 20, 20, .8);
-  padding: 10px 30px;
+    background: rgba(20, 20, 20, .8);
+    padding: 10px 30px;
+}
+
+#myContainer {
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .signupSection {
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.signupForm {
-  width: 100%;
-  padding: 30px;
-  background: rgba(20, 40, 40, .8);
-  transition: .2s;
+    width: 100%;
+    padding: 30px;
+    background: rgba(20, 40, 40, .8);
+    transition: .2s;
 }
 
 .signupForm h2 {
-  font-weight: 300;
-  color: white;
+    font-weight: 300;
+    color: white;
 }
 
 input, select {
-  margin: 15px 0;
-  font-size: 0.7em;
-  padding: 10px;
-  width: 250px;
-  border: 1px solid rgba(10, 180, 180, 1);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  background: rgba(20, 20, 20, .2);
-  color: white;
-  outline: none;
-  border-radius: 5px;
+    margin: 15px 0;
+    font-size: 0.7em;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid rgba(10, 180, 180, 1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(20, 20, 20, .2);
+    color: white;
+    outline: none;
+    border-radius: 5px;
 }
 
 select {
-  width: 270px;
-  height: 43px;
+    width: 270px;
+    height: 43px;
 }
 
 .noBullet {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 [role="tooltip"] {
-  display: none;
-  padding: 0 2px 2px 2px;
-  margin: 0 0 10px 0;
-  color: #FDF5E6;
-  width: 100%;
-  z-index: 2;
-  font-weight: normal;
-  font-style: italic;
+    display: none;
+    padding: 0 2px 2px 2px;
+    margin: 0 0 10px 0;
+    color: #FDF5E6;
+    width: 100%;
+    z-index: 2;
+    font-weight: normal;
+    font-style: italic;
 }
 
 input:focus + [role="tooltip"] {
-  display: block;
+    display: block;
 }
 
 button {
-  border: 1px solid rgba(10, 180, 180, 1);
-  background: rgba(20, 20, 20, .6);
-  font-size: 1.5em;
-  color: white;
-  margin-top: 20px;
-  padding: 10px 50px;
-  cursor: pointer;
-  transition: .4s;
+    border: 1px solid rgba(10, 180, 180, 1);
+    background: rgba(20, 20, 20, .6);
+    font-size: 1em;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: .4s;
 }
 
 button:hover {
-  background: rgba(20, 20, 20, .8);
-  padding: 10px 80px;
+    background: rgba(20, 20, 20, .8);
+    padding: 10px 80px;
 }
 
 #myContainer.size-normal { font-size: 16px; }
@@ -110,79 +110,174 @@ button:hover {
 #myContainer.size-small { font-size: 14px; }
 
 .loading-spinner {
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
-  opacity: 1;
-  position: relative;
-  -webkit-box-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  justify-content: flex-end;
-  height: 80px;
-  padding: 40px 40px 0;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    opacity: 1;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    height: 80px;
+    padding: 40px 40px 0;
 }
 
 @-webkit-keyframes spinner {
-  0% {
-    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    transform: translate3d(-50%, -50%, 0) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    transform: translate3d(-50%, -50%, 0) rotate(360deg);
-  }
+    0% {
+        -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
 }
 
 @keyframes spinner {
-  0% {
-    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    transform: translate3d(-50%, -50%, 0) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    transform: translate3d(-50%, -50%, 0) rotate(360deg);
-  }
+    0% {
+        -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
 }
 
 .loading-spinner.paused {
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-  opacity: 0.2;
-  -webkit-transition: opacity linear 0.1s;
-  transition: opacity linear 0.1s;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    opacity: 0.8;
+    -webkit-transition: opacity linear 0.1s;
+    transition: opacity linear 0.1s;
 }
 
 .loading-spinner::before {
-  -webkit-animation: 1.5s linear infinite spinner;
-  animation: 1.5s linear infinite spinner;
-  -webkit-animation-play-state: inherit;
-  animation-play-state: inherit;
-  border: solid 3px #ffffff;
-  border-bottom-color: #0ab4b4;
-  border-radius: 50%;
-  content: "";
-  height: 40px;
-  left: 50%;
-  opacity: inherit;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-  width: 40px;
-  will-change: transform;
+    -webkit-animation: 1.5s linear infinite spinner;
+    animation: 1.5s linear infinite spinner;
+    -webkit-animation-play-state: inherit;
+    animation-play-state: inherit;
+    border: solid 3px #ffffff;
+    border-bottom-color: #141414;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    left: 50%;
+    opacity: inherit;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    width: 40px;
+    will-change: transform;
 }
 
 .loading-spinner-btn {
-  display: inline-block;
-  margin: 0 auto 40px;
-  background: rgba(20, 20, 20, .8);
+    display: block;
+    margin: 0 auto 20px;
+    background: rgba(20, 20, 20, .8);
 }
 
 .loading-spinner-btn:hover {
-  padding: 10px 40px;
+    padding: 10px 40px;
+}
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #0ab4b4;
+    color: #000;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+/**
+Dialog styles
+*/
+
+.hidden {
+    display: none;
+}
+  
+[role="alertdialog"],
+[role="dialog"] {
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #000;
+    background-color: #fff;
+    min-height: 100vh;
+}
+  
+@media screen and (min-width: 640px) {
+    [role="alertdialog"],
+    [role="dialog"] {
+        position: absolute;
+        top: 2rem;
+        left: 50vw;  /* move to the middle of the screen (assumes relative parent is the body/viewport) */
+        transform: translateX(-50%);  /* move backwards 50% of this element's width */
+        min-width: calc(640px - (15px * 2));  /* == breakpoint - left+right margin */
+        min-height: auto;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.12), 0 15px 12px rgba(0, 0, 0, 0.22);
+    }
+}
+
+.dialog_label {
+    text-align: center;
+}
+  
+.dialog_form {
+    margin: 15px;
+}
+
+.dialog_form_actions {
+    text-align: right;
+    padding: 0 20px 20px;
+}
+  
+.dialog_close_button {
+    float: right;
+    position: absolute;
+    top: 10px;
+    left: 92%;
+    height: 25px;
+}
+
+.dialog-backdrop {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+  
+@media screen and (min-width: 640px) {
+    .dialog-backdrop {
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.dialog-backdrop.active {
+    display: block;
+}
+
+.no-scroll {
+    overflow-y: auto !important;
+}
+  
+.has-dialog {
+    overflow: hidden;
 }
