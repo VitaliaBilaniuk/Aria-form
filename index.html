@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Example of ARIA form">
@@ -24,21 +24,22 @@
                     <h2>Sign Up</h2>
                     <ul class="noBullet">
                     <li>
+                        <label for="fontSize" hidden>Font Size:</label><br />
                         <input id="fontSize" type="text" name="fontSize" value="size-normal" hidden/>
                     </li>
                     <li>
                         <label for="fName">First Name:<span class="reqField">*</span></label><br />
-                        <input id="fName" type="text" name="firstName" aria-required="" required="" aria-describedby="fName-tip"/>
+                        <input id="fName" type="text" name="firstName" aria-required="true" required="true" aria-describedby="fName-tip"/>
                         <div role="tooltip" id="fName-tip">Hint: Type your first name here.</div>
                     </li>
                     <li>
                         <label for="lName">Last Name:<span class="reqField">*</span></label><br />
-                        <input id="lName" type="text" name="lastName" aria-required="" required="" aria-describedby="lName-tip"/>
+                        <input id="lName" type="text" name="lastName" aria-required="true" required="true" aria-describedby="lName-tip"/>
                         <div role="tooltip" id="lName-tip">Hint: Type your last name here.</div>
                     </li>
                     <li>
                         <label for="address1">Address line 1:<span class="reqField">*</span></label><br />
-                        <input id="address1" type="text" name="address" aria-required="" required="" aria-describedby="address1-tip"/>
+                        <input id="address1" type="text" name="address" aria-required="true" required="true" aria-describedby="address1-tip"/>
                         <div role="tooltip" id="address1-tip">Hint: Type your address here.</div>
                     </li>
                     <li>
@@ -48,22 +49,22 @@
                     </li>
                     <li>
                         <label for="city">City:<span class="reqField">*</span></label><br />
-                        <input id="city" type="text" name="city" aria-required="" required="" aria-describedby="city-tip"/>
+                        <input id="city" type="text" name="city" aria-required="true" required="true" aria-describedby="city-tip"/>
                         <div role="tooltip" id="city-tip">Hint: Type your city here.</div>
                     </li>
                     <li>
                         <label for="state">State/Province/Region:<span class="reqField">*</span></label><br />
-                        <input id="state" type="text" name="state" aria-required="" required="" aria-describedby="state-tip"/>
+                        <input id="state" type="text" name="state" aria-required="true" required="true" aria-describedby="state-tip"/>
                         <div role="tooltip" id="state-tip">Hint: Type your state/province or region here.</div>
                     </li>
                     <li>
                         <label for="zip">ZIP/Postal code:<span class="reqField">*</span></label><br />
-                        <input id="zip" type="text" name="zip" aria-required="" required="" aria-describedby="zip-tip"/>
+                        <input id="zip" type="text" name="zip" aria-required="true" required="true" aria-describedby="zip-tip"/>
                         <div role="tooltip" id="zip-tip">Hint: Type your ZIP/postal code here.</div>
                     </li>
                     <li>
                         <label for="country">Country<span class="reqField">*</span></label><br />
-                        <select id="country" name="country" aria-required="" required="">
+                        <select id="country" name="country" aria-required="true" required="true">
                             <option>Canada</option>
                             <option>France</option>
                             <option>Germany</option>
@@ -76,12 +77,12 @@
                     </li>
                     <li>
                         <label for="bday">Birthday(day,month, year):<span class="reqField">*</span></label><br />
-                        <input id="bday" type="date" name="bday" aria-required="" required="" aria-describedby="bday-tip">
+                        <input id="bday" type="date" name="bday" aria-required="true" required="true" aria-describedby="bday-tip">
                         <div role="tooltip" id="bday-tip">Hint: Type your birthday date here.</div>
                     </li>
                     <li>
                         <label for="cardNumber">Card number:<span class="reqField">*</span></label><br />
-                        <input id="cardNumber" type="text" name="cardNumber" aria-required="" required="" aria-describedby="cardNumber-tip"/>
+                        <input id="cardNumber" type="text" name="cardNumber" aria-required="true" required="true" aria-describedby="cardNumber-tip"/>
                         <div role="tooltip" id="cardNumber-tip">Hint: Type your card number here.</div>
                     </li>
                     <li>
@@ -91,7 +92,7 @@
                     </li>
                     <li>
                         <label for="email">Email:<span class="reqField">*</span></label><br />
-                        <input id="email" type="email" name="email" value="" aria-required="" required="" aria-describedby="email-tip"/>
+                        <input id="email" type="email" name="email" value="" aria-required="true" required="true" aria-describedby="email-tip"/>
                         <div role="tooltip" id="email-tip">Hint: Type your email address here.</div>
                     </li>
                     <li>
